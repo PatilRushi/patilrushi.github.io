@@ -31,10 +31,7 @@ const Hero = () => {
             <TypingAnimation
               texts={[
                 'Senior Software Engineer',
-                'Backend Architect',
-                'Microservices Expert',
-                'System Design Specialist',
-                'Software Geek 🤓',
+                'Software Geek',
               ]}
               className="gradient-text font-bold"
             />
