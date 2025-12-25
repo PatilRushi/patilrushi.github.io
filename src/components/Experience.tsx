@@ -30,7 +30,7 @@ const Experience = () => {
       role: 'Senior Software Engineer | Founding member of NAVI UPI team',
       period: 'March 2022 - Present',
       location: 'Bengaluru',
-      logo: '/navi-logo.svg',
+      logo: '/navi-logo.png',
       projects: [
         {
           name: 'UPI Multibank | Integration of Multiple Payment Service Providers',
@@ -78,7 +78,7 @@ const Experience = () => {
       role: 'Software Engineer',
       period: 'October 2020 - March 2022',
       location: 'Bengaluru',
-      logo: '/quantiphi-logo.svg',
+      logo: '📊',
       projects: [
         {
           name: 'Adani - Google PSO',
@@ -116,7 +116,7 @@ const Experience = () => {
               <TiltCard className="card">
                 <div className="flex items-start gap-4 mb-4">
                   {exp.logo ? (
-                    <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
+                    <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center bg-white rounded-lg p-2">
                       <img src={exp.logo} alt={`${exp.company} logo`} className="w-full h-full object-contain" />
                     </div>
                   ) : (

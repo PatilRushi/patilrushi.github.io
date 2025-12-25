@@ -36,22 +36,7 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <motion.a
-            href="#"
-            className="flex items-center gap-3"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <img 
-              src="/profile.jpg" 
-              alt="Rushikesh Patil" 
-              className="w-10 h-10 rounded-full object-cover border-2 border-primary-500 hover:scale-110 transition-transform"
-            />
-            <span className="text-xl font-bold gradient-text hidden sm:block">Rushikesh Patil</span>
-          </motion.a>
-
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ml-auto">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
