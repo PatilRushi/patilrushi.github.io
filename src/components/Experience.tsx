@@ -15,6 +15,7 @@ interface ExperienceItem {
   role: string
   period: string
   location: string
+  logo?: string
   projects: Project[]
 }
 
@@ -29,6 +30,7 @@ const Experience = () => {
       role: 'Senior Software Engineer | Founding member of NAVI UPI team',
       period: 'March 2022 - Present',
       location: 'Bengaluru',
+      logo: '🏦',
       projects: [
         {
           name: 'UPI Multibank | Integration of Multiple Payment Service Providers',
@@ -76,6 +78,7 @@ const Experience = () => {
       role: 'Software Engineer',
       period: 'October 2020 - March 2022',
       location: 'Bengaluru',
+      logo: '📊',
       projects: [
         {
           name: 'Adani - Google PSO',
@@ -112,9 +115,15 @@ const Experience = () => {
             >
               <TiltCard className="card">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="p-3 bg-primary-100 dark:bg-primary-900/30 rounded-full text-primary-500 flex-shrink-0">
-                    <Briefcase size={24} />
-                  </div>
+                  {exp.logo ? (
+                    <div className="text-5xl flex-shrink-0">
+                      {exp.logo}
+                    </div>
+                  ) : (
+                    <div className="p-3 bg-primary-100 dark:bg-primary-900/30 rounded-full text-primary-500 flex-shrink-0">
+                      <Briefcase size={24} />
+                    </div>
+                  )}
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold mb-1">{exp.company}</h3>
                     <p className="text-lg text-primary-500 dark:text-primary-400 mb-2">{exp.role}</p>

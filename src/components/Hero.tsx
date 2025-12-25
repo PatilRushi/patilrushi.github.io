@@ -34,6 +34,7 @@ const Hero = () => {
                 'Backend Architect',
                 'Microservices Expert',
                 'System Design Specialist',
+                'Software Geek 🤓',
               ]}
               className="gradient-text font-bold"
             />

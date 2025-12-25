@@ -10,43 +10,19 @@ const Skills = () => {
   const skillCategories = [
     {
       category: 'Languages',
-      skills: [
-        { name: 'Java', level: 95 },
-        { name: 'Kotlin', level: 90 },
-        { name: 'Go', level: 85 },
-      ],
+      skills: ['Java', 'Kotlin', 'Go'],
     },
     {
       category: 'Backend & Frameworks',
-      skills: [
-        { name: 'Spring Boot', level: 95 },
-        { name: 'Kafka', level: 90 },
-        { name: 'REST APIs', level: 95 },
-        { name: 'Protobuf', level: 85 },
-        { name: 'gRPC', level: 85 },
-        { name: 'Maven', level: 90 },
-      ],
+      skills: ['Spring Boot', 'Kafka', 'REST APIs', 'Protobuf', 'gRPC', 'Maven'],
     },
     {
       category: 'Databases & Storage',
-      skills: [
-        { name: 'PostgreSQL', level: 90 },
-        { name: 'Redis', level: 90 },
-        { name: 'S3', level: 85 },
-        { name: 'Firebase', level: 80 },
-      ],
+      skills: ['PostgreSQL', 'Redis', 'S3', 'Firebase'],
     },
     {
       category: 'DevOps & Tools',
-      skills: [
-        { name: 'Docker', level: 85 },
-        { name: 'Kubernetes', level: 80 },
-        { name: 'AWS', level: 85 },
-        { name: 'Git', level: 95 },
-        { name: 'Prometheus', level: 85 },
-        { name: 'Grafana', level: 85 },
-        { name: 'Loki', level: 80 },
-      ],
+      skills: ['Docker', 'Kubernetes', 'AWS', 'Git', 'Prometheus', 'Grafana', 'Loki'],
     },
   ]
 
@@ -73,27 +49,21 @@ const Skills = () => {
                 <h3 className="text-2xl font-bold mb-6 text-primary-500 dark:text-primary-400">
                   {category.category}
                 </h3>
-                <div className="space-y-4">
+                <div className="flex flex-wrap gap-3">
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex}>
-                      <div className="flex justify-between mb-2">
-                        <span className="font-medium text-gray-700 dark:text-gray-300">
-                          {skill.name}
-                        </span>
-                      </div>
-                      <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
-                        <motion.div
-                          className="h-full bg-gradient-to-r from-primary-500 via-purple-500 to-pink-500 gradient-animate"
-                          initial={{ width: 0 }}
-                          animate={isInView ? { width: `${skill.level}%` } : {}}
-                          transition={{ 
-                            duration: 1.5, 
-                            delay: catIndex * 0.1 + skillIndex * 0.08,
-                            ease: 'easeOut'
-                          }}
-                        />
-                      </div>
-                    </div>
+                    <motion.span
+                      key={skillIndex}
+                      className="px-4 py-2 bg-gradient-to-r from-primary-100 to-purple-100 dark:from-primary-900/30 dark:to-purple-900/30 text-gray-800 dark:text-gray-200 rounded-full font-medium hover:scale-110 transition-transform cursor-default"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                      transition={{ 
+                        duration: 0.3, 
+                        delay: catIndex * 0.1 + skillIndex * 0.05,
+                      }}
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      {skill}
+                    </motion.span>
                   ))}
                 </div>
               </motion.div>

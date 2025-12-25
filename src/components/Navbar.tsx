@@ -36,17 +36,7 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <motion.a
-            href="#"
-            className="text-2xl font-bold gradient-text"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            RP
-          </motion.a>
-
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ml-auto">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
