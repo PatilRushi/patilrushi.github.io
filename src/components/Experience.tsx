@@ -78,7 +78,7 @@ const Experience = () => {
       role: 'Software Engineer',
       period: 'October 2020 - March 2022',
       location: 'Bengaluru',
-      logo: '📊',
+      logo: '/quantiphi-logo.png',
       projects: [
         {
           name: 'Adani - Google PSO',

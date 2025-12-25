@@ -50,12 +50,25 @@ const About = () => {
             distributed microservices. Expert in <strong>Java, Kotlin, and Golang</strong>, with deep
             expertise in REST, Spring Boot, gRPC, and Protobuf.
           </p>
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
             Strong background in SQL/NoSQL databases, Kafka, Redis, and building{' '}
             <strong>high-throughput, low-latency systems</strong>. Currently leading critical initiatives
             at Navi Technologies as a founding member of the UPI team, handling India's #4 UPI App with
             300M+ monthly transactions.
           </p>
+          <div className="flex justify-center items-center gap-8 mt-8">
+            <motion.div
+              className="flex items-center gap-4 bg-white dark:bg-gray-800 px-6 py-4 rounded-lg shadow-lg"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <img src="/navi-logo.png" alt="Navi" className="h-12 object-contain" />
+              <span className="text-2xl font-bold text-gray-400">×</span>
+              <img src="/upi-logo.png" alt="UPI" className="h-12 object-contain" />
+            </motion.div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
