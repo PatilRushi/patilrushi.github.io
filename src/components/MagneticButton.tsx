@@ -11,7 +11,6 @@ interface MagneticButtonProps {
 const MagneticButton = ({ children, className = '', href, onClick }: MagneticButtonProps) => {
   const ref = useRef<HTMLAnchorElement | HTMLButtonElement>(null)
   const [position, setPosition] = useState({ x: 0, y: 0 })
-  const [isHovered, setIsHovered] = useState(false)
   const [ripples, setRipples] = useState<Array<{ x: number; y: number; id: number }>>([])
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -26,7 +25,6 @@ const MagneticButton = ({ children, className = '', href, onClick }: MagneticBut
 
   const handleMouseLeave = () => {
     setPosition({ x: 0, y: 0 })
-    setIsHovered(false)
   }
 
   const handleClick = (e: React.MouseEvent) => {
@@ -54,7 +52,6 @@ const MagneticButton = ({ children, className = '', href, onClick }: MagneticBut
       href={href}
       className={`relative overflow-hidden ${className}`}
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
       animate={{
